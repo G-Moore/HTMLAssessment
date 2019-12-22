@@ -13,21 +13,32 @@
     <h2>Scoreboard</h2>
 
     <table>
+      <thead>
+        <tr>
+          <td colspan="1"></td>
+          <td colspan="4">Scores by quarter</td>
+        </tr>
+        <tr>
+          <th rowspan="2">Team Name</th>
+          <th colspan="2">First Half :</th>
+          <th colspan="2">Second Half</th>
+          <th rowspan="2">Final</th>
+        </tr>
+        <tr>
+          <th>Q1</th>
+          <th>Q2</th>
+          <th>Q3</th>
+          <th>Q4</th>
+        </tr>
+      </thead>
+      <tbody>
       <tr>
-        <td colspan="1"></td>
-        <td colspan="4">Scores by quarter</td>
-      </tr>
-      <tr>
-        <th rowspan="2">Team Name</th>
-        <th colspan="2">First Half :</th>
-        <th colspan="2">Second Half</th>
-        <th rowspan="2">Final</th>
-      </tr>
-      <tr>
-        <th>Q1</th>
-        <th>Q2</th>
-        <th>Q3</th>
-        <th>Q4</th>
+        <td>Lions </td>
+        <td> 0 </td>
+        <td> 0 </td>
+        <td> 0 </td>
+        <td> 0 </td>
+        <td> 0 </td>
       </tr>
       <tr>
         <td>Broncos </td>
@@ -37,14 +48,7 @@
         <td> 0 </td>
         <td> 0 </td>
       </tr>
-      <tr>
-        <td> Lions </td>
-        <td> 0 </td>
-        <td> 0 </td>
-        <td> 0 </td>
-        <td> 0 </td>
-        <td> 0 </td>
-      </tr>
+      </tbody>
       <tfoot>
         <th>Total</th>
         <th>0</th>
@@ -53,13 +57,29 @@
         <th>0</th>
         <th>0</th>
       </tfoot>
-
     </table><br><br>
 
     <h2>Team Round Up</h2>
+    <table>
+      <td>
+      <img src="http://clipart-library.com/images/rTjKEpBec.gif"height="60" width="120"><br>
+      <a href="https://www.detroitlions.com/" target="_blank">Detroit Lions</a>
+      <ul>
+        <li>Coach: Matt Patricia</li>
+        <li>QB
+        <ol>
+          <li>Jeff Driskel</li>
+          <li>David Blough</li>
+          <li>Matthew Stafford(injured)</li>
+       </ol></li>
+    </ul><br>
+    </td>
+    <!-- <td><img src="http://clipart-library.com/new_gallery/209-2093392_fight-png-vs-logo-mortal-kombat.png"height="100" width="220"></td><br> -->
+    <!-- <td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4fu4fRLu_ie2lNGfvTtOBaTZ-ICz1jQppgSYBx3jL2Gaq5UZw-g&s"height="60" width="120"></td><br> -->
 
+    <td>
     <img src="http://clipart-library.com/img/1383064.jpg"height="60" width="100"><br>
-    <a href="https://www.denverbroncos.com/">Denver Broncos</a>
+    <a href="https://www.denverbroncos.com/" target="_blank">Denver Broncos</a>
     <ul>
       <li>Coach: Vic Fangio</li>
       <li>QB
@@ -70,19 +90,8 @@
         </ol>
       </li>
    </ul>
-
-    <img src="http://clipart-library.com/images/rTjKEpBec.gif"height="60" width="120"><br>
-    <a href="https://www.detroitlions.com/">Detroit Lions</a>
-    <ul>
-      <li>Coach: Matt Patricia</li>
-      <li>QB
-        <ol>
-          <li>Jeff Driskel</li>
-          <li>David Blough</li>
-          <li>Matthew Stafford(injured)</li>
-       </ol></li>
-    </ul><br>
-
+   </td>
+</table>
   <h2>Survey Form</h2>
 
     <form>
@@ -90,25 +99,41 @@
       Name: <input type="text" name="firstName" placeholder="First Name">
       <input type="text" name="lastName" placeholder="Last Name"><br>
 
- Favorite Sport: <select>
-  <option value="soccer">Soccer</option>
-  <option value="football">Football</option>
-  <option value="hockey">Hockey</option>
-  <option value="baseball">Baseball</option>
-  <option value="basketball">Basketball</option>
-</select><br>
+      Favorite Sport: <select id="mySport">
+      <option value="football">Football</option>
+      <option value="hockey">Hockey</option>
+      <option value="baseball">Baseball</option>
+      <option value="basketball">Basketball</option>
+      <option value="soccer">Soccer</option>
+      <option value="alligator wrastlin'">Alligator Wrastlin'</option>
+      </select><br>
 
-I have <input type="checkbox" name="Attended" value="Attended">Attended
-<input type="checkbox">Played
-<input type="checkbox">Coached
-<input type="checkbox">Bet on this sport.<br>
-For this sport I prefer: <input type="radio">Amateur
-<input type="radio">College
-<input type="radio">Professional<br>
-<form action="https://www.google.com" target="_blank">
-      <input type="submit" value="Submit Query"><br>
-    </form>
+      Games watched a week: <input type="number" name="quantity" min="0" max="100"><br>
+
+      I have <input type="checkbox" name="Attended" value="Attended">Attended
+      <input type="checkbox">Played
+      <input type="checkbox">Bet on this sport.<br>
+      For this sport I prefer: <input type="radio">Amateur
+      <input type="radio">College
+      <input type="radio">Professional<br>
+
+      <form>
+        <button type="button" onclick="myFunction()" value="Collect Trophy">Collect Trophy</button>
+        <span id="demo">&#127942</span>
+      </form>
+
+      <form action="https://www.google.com" target="_blank">
+       <input type="submit" value="Submit Query" onclick="alert('Good Karma surrounds you, have a Google on us.')">
+      </form>
     </form>
     <br><br><br><br>
+
+    <script>
+      function myFunction() {
+      var x = document.getElementById("mySport").value;
+      document.getElementById("demo").innerHTML = x;}
+    </script>
+
+    <form>
   </body>
 </html>
