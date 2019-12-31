@@ -1,0 +1,66 @@
+h1, h2, h3, h4, h5, h6{
+/* British racing green */
+  color: #004225;
+  font-family: sans-serif;
+}
+
+table{
+  border-style: solid;
+  border-width: 3px;
+  border-color: black;
+}
+
+table thead{
+  font-weight: bold;
+  color: orangered;
+}
+
+table tbody{
+  text-align: center;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: yellow;
+}
+
+blockquote{
+  background-color: blue;
+  color: orangered;
+}
+
+.hyperLink:hover {
+  background-color: orangered;
+  text-decoration: none;
+}
+
+li {
+  list-style-type: square;
+}
+
+#teamRoster > li:first-child {
+  background-image: url("https://upload.wikimedia.org/wikipedia/en/4/44/Denver_Broncos_logo.svg");
+  background-repeat: no-repeat;
+  background-size: 250px;
+  background-color: rgba(255, 255, 255, 0.4);
+  background-blend-mode: lighten;
+}
+
+#teamRoster > li:last-child {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/5/5c/Chicago_Bears_logo.svg");
+  background-repeat: no-repeat;
+  background-color: rgba(255, 255, 255, 0.4);
+  background-blend-mode: lighten;
+  margin-top: 30px;
+}
+
+#teamRoster ol:first-line{
+  font-weight: bold;
+}
+
+img {
+  display: none;
+}
+
+#checkbox-grid li{
+  list-style-type: disc;
+}
